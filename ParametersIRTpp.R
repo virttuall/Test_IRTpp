@@ -12,7 +12,13 @@ parametersIRTpp <-function( model , pathDataSet, div)
   }
   else if( model == 'RASCH_A_CONSTAN')
   {
-    outputIRTpp = matrix(unlist(outputIRTpp), ncol = 1, byrow = FALSE) #TODO
+    v1 = outputIRTpp[1]
+    v1 = unlist(v1)
+    outputIRTpp = outputIRTpp[-1]
+    v1 = rep(v1, times = length(outputIRTpp))
+    v2 = unlist(outputIRTpp)
+    v1 = c(v1, v2)
+    outputIRTpp = matrix( v1, ncol = 2, byrow = FALSE) #TODO
   }
   else if( model == 'TWO_PL')
   {

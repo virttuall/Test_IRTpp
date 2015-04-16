@@ -5,7 +5,6 @@ blocks = c('Bloque_1')
 models = c('1PL','1PL_A_Dist','2PL','3PL')
 namesDataSet <- c('Test_10_1_1000.csv', 'Test_10_2_1000.csv')  #this vector to save the names of datasets
 
-
 listBlocks <- list()
 for ( block in blocks) # covers all blocks
 {
@@ -20,6 +19,7 @@ for ( block in blocks) # covers all blocks
       
       path = paste(dir, block, model, 'Datasets', '' , sep = "/" ) # to made the path of dataset
       path = paste(path, nameDataSet, sep = "" )
+      print(path)
       nameModelForIRTpp = ""
       nameModelForMirt = ""
       if ( model == '1PL')
@@ -48,22 +48,21 @@ for ( block in blocks) # covers all blocks
       }
     
       resultMirt = parametersMirt(nameModelForMirt, path)
-      resultIRTpp = parametersIRTpp(nameModelForIRTpp, path)
-      print(resultIRTpp)
-      print(resultMirt)
+      #resultIRTpp = parametersIRTpp(nameModelForIRTpp, path)
+      resultIRTpp = parametersMirt(nameModelForMirt, path)
+      #print(resultIRTpp)
+      #print(resultMirt)
 
       
       #mapP <- c( 'a','b','c')
       #names(mapP) <- c(1, 2, 3)
 
-      #for ( index in 1:3)
-      #{
-       # difference = abs(parametersMirt[[index]] - parametersSics[[index]])
-        #TestDataStructure$block$model$nameDataSet$statistical$difference$mapP[index] = difference;
-        #maxDif = max(difference)
-        #l <- append( l, maxDif)
-        #print(maxDif)
-      #}
+      for ( index in 1:3)
+      {
+        difference = abs(resultMirt[[index]] - resultIRTpp[[index]])
+        maxDif = max(difference)
+        l <- append( l, maxDif)
+      }
       listDataSets <- append( listDataSets, list(l))
     } 
     listModels <- append(listModels, list(listDataSets))
