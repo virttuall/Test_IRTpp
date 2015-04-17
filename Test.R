@@ -1,9 +1,11 @@
+#rm(list=ls())
 namesInputForIRTpp = c('RASCH_A1', 'RASCH_A_CONSTAN', 'TWO_PL', 'THREE_PL' ) # name of model for input to IRTpp, for is change in package IRTpp
 namesInputForMirt = c( 'Rasch', '1PL_AD', '2PL', '3PL')
 dir = '/home/Yeison/SICS'
 blocks = c('Bloque_1')
-models = c('1PL','1PL_A_Dist','2PL','3PL')
-namesDataSet <- c('Test_10_1_1000.csv', 'Test_10_2_1000.csv')  #this vector to save the names of datasets
+#models = c('1PL', '1PL_A_Dist', '2PL',  '3PL')
+models = c('3PL')
+namesDataSet = c('Test_10_1_1000.csv','Test_10_2_1000.csv')
 
 listBlocks <- list()
 for ( block in blocks) # covers all blocks
@@ -48,10 +50,10 @@ for ( block in blocks) # covers all blocks
       }
     
       resultMirt = parametersMirt(nameModelForMirt, path)
-      #resultIRTpp = parametersIRTpp(nameModelForIRTpp, path)
-      resultIRTpp = parametersMirt(nameModelForMirt, path)
-      #print(resultIRTpp)
-      #print(resultMirt)
+      resultIRTpp = parametersIRTpp(nameModelForIRTpp, path)
+      #resultIRTpp = parametersMirt(nameModelForMirt, path)
+      print(resultIRTpp)
+      print(resultMirt)
 
       
       #mapP <- c( 'a','b','c')

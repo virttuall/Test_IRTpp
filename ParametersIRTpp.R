@@ -1,5 +1,5 @@
 # 'RASCH_A1', 'RASCH_A_CONSTAN', 'TWO_PL', 'THREE_PL' 
-parametersIRTpp <-function( model , pathDataSet, div)
+parametersIRTpp <-function( model , pathDataSet)
 {
   library('IRTpp')
   data = read.table(pathDataSet, sep=" ",header=T)
