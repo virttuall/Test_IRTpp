@@ -4,16 +4,17 @@ parametersIRTpp <-function( model , pathDataSet)
   library('IRTpp')
   data = read.table(pathDataSet, sep=" ",header=T)
   dataForIRTpp = as.matrix(data)
-  outputIRTpp = irtpp( dataForIRTpp, model, 1, "ANDRADE" , 0.0001, 200, T)
+  outputIRTpp = irtpp( dataForIRTpp, model, 1, "ANDRADE" , 0.0001, 1000, T)
   outputIRTpp = outputIRTpp[1]
   if ( model == 'RASCH_A1')
   {
     outputIRTpp = matrix(unlist(outputIRTpp), ncol = 1, byrow = FALSE)
   }
-  else if( model == 'RASCH_A_CONSTAN')
+  else if( model == 'RASCH_A_CONSTANT')
   {
-    v1 = outputIRTpp[1]
-    v1 = unlist(v1)
+    v1 = outputIRTpp[[1]]
+    v1 = unlist(v1[1])
+    outputIRTpp = outputIRTpp[[1]]
     outputIRTpp = outputIRTpp[-1]
     v1 = rep(v1, times = length(outputIRTpp))
     v2 = unlist(outputIRTpp)

@@ -61,7 +61,7 @@ namesInputForIRTpp = c('RASCH_A1', 'RASCH_A_CONSTAN', 'TWO_PL', 'THREE_PL' ) # n
 namesInputForMirt = c( 'Rasch', '1PL_AD', '2PL', '3PL')
 dir = '/home/Yeison/SICS'
 blocks = c('Bloque_1')
-models = c('2PL')
+models = c('3PL')
 
 
 namesDataSet = c('Test_100_38_10000.csv','Test_10_31_1000.csv','Test_20_24_1000.csv','Test_50_17_5000.csv','Test_100_38_5000.csv','Test_10_31_2000.csv','Test_20_24_2000.csv','Test_50_18_10000.csv',
@@ -178,4 +178,35 @@ for ( block in blocks) # covers all blocks
 print(str(listBlocks))
 
 
+'Test_50_2_5000.csv','Test_100_16_10000.csv','Test_100_9_5000.csv','Test_10_39_1000.csv','Test_20_3_2000.csv','Test_50_25_10000.csv','Test_100_16_5000.csv',
+'Test_10_10_1000.csv','Test_10_39_2000.csv','Test_20_32_1000.csv','Test_50_25_5000.csv','Test_100_17_10000.csv','Test_10_10_2000.csv','Test_10_40_1000.csv','Test_20_32_2000.csv',
+'Test_50_26_10000.csv','Test_100_17_5000.csv','Test_10_1_1000.csv','Test_10_40_2000.csv','Test_20_33_1000.csv','Test_50_26_5000.csv','Test_100_18_10000.csv','Test_10_11_1000.csv',
+'Test_10_4_1000.csv','Test_20_33_2000.csv','Test_50_27_10000.csv','Test_100_18_5000.csv','Test_10_11_2000.csv','Test_10_4_2000.csv','Test_20_34_1000.csv','Test_50_27_5000.csv',
+'Test_100_19_10000.csv','Test_10_1_2000.csv','Test_10_5_1000.csv','Test_20_34_2000.csv','Test_50_28_10000.csv','Test_100_19_5000.csv','Test_10_12_1000.csv','Test_10_5_2000.csv',
+'Test_20_35_1000.csv','Test_50_28_5000.csv','Test_100_20_10000.csv','Test_10_12_2000.csv','Test_10_6_1000.csv','Test_20_35_2000.csv','Test_50_29_10000.csv','Test_100_20_5000.csv',
+'Test_10_13_1000.csv','Test_10_6_2000.csv','Test_20_36_1000.csv','Test_50_29_5000.csv','Test_100_2_10000.csv','Test_10_13_2000.csv','Test_10_7_1000.csv','Test_20_36_2000.csv',
+'Test_50_30_10000.csv','Test_100_21_10000.csv','Test_10_14_1000.csv','Test_10_7_2000.csv','Test_20_37_1000.csv','Test_50_30_5000.csv','Test_100_21_5000.csv','Test_10_14_2000.csv',
+'Test_10_8_1000.csv','Test_20_37_2000.csv','Test_50_3_10000.csv','Test_100_22_10000.csv','Test_10_15_1000.csv','Test_10_8_2000.csv','Test_20_38_1000.csv','Test_50_31_10000.csv',
+'Test_100_22_5000.csv','Test_10_15_2000.csv','Test_10_9_1000.csv','Test_20_38_2000.csv','Test_50_31_5000.csv','Test_100_23_10000.csv','Test_10_16_1000.csv','Test_10_9_2000.csv',
+'Test_20_39_1000.csv','Test_50_32_10000.csv','Test_100_23_5000.csv','Test_10_16_2000.csv','Test_20_10_1000.csv','Test_20_39_2000.csv','Test_50_32_5000.csv','Test_100_24_10000.csv',
+'Test_10_17_1000.csv','Test_20_10_2000.csv','Test_20_40_1000.csv','Test_50_33_10000.csv','Test_100_24_5000.csv','Test_10_17_2000.csv','Test_20_1_1000.csv','Test_20_40_2000.csv',
+'Test_50_33_5000.csv','Test_100_2_5000.csv','Test_10_18_1000.csv','Test_20_11_1000.csv','Test_20_4_1000.csv','Test_50_34_10000.csv','Test_100_25_10000.csv','Test_10_18_2000.csv',
+'Test_20_11_2000.csv','Test_20_4_2000.csv','Test_50_34_5000.csv','Test_100_25_5000.csv','Test_10_19_1000.csv','Test_20_1_2000.csv','Test_20_5_1000.csv','Test_50_3_5000.csv',
+'Test_100_26_10000.csv','Test_10_19_2000.csv','Test_20_12_1000.csv','Test_20_5_2000.csv','Test_50_35_10000.csv','Test_100_26_5000.csv','Test_10_20_1000.csv','Test_20_12_2000.csv',
+'Test_20_6_1000.csv','Test_50_35_5000.csv','Test_100_27_10000.csv','Test_10_20_2000.csv','Test_20_13_1000.csv','Test_20_6_2000.csv','Test_50_36_10000.csv','Test_100_27_5000.csv',
+'Test_10_2_1000.csv','Test_20_13_2000.csv','Test_20_7_1000.csv','Test_50_36_5000.csv','Test_100_28_10000.csv','Test_10_21_1000.csv','Test_20_14_1000.csv','Test_20_7_2000.csv',
+'Test_50_37_10000.csv','Test_100_28_5000.csv','Test_10_21_2000.csv','Test_20_14_2000.csv','Test_20_8_1000.csv','Test_50_37_5000.csv','Test_100_29_10000.csv',
+'Test_10_2_2000.csv','Test_20_15_1000.csv','Test_20_8_2000.csv','Test_50_38_10000.csv','Test_100_29_5000.csv','Test_10_22_1000.csv','Test_20_15_2000.csv','Test_20_9_1000.csv'
+,'Test_50_38_5000.csv','Test_100_30_10000.csv','Test_10_22_2000.csv','Test_20_16_1000.csv','Test_20_9_2000.csv','Test_50_39_10000.csv','Test_100_30_5000.csv','Test_10_23_1000.csv',
+'Test_20_16_2000.csv','Test_50_10_10000.csv','Test_50_39_5000.csv','Test_100_3_10000.csv','Test_10_23_2000.csv','Test_20_17_1000.csv','Test_50_10_5000.csv','Test_50_40_10000.csv',
+'Test_100_31_10000.csv','Test_10_24_1000.csv','Test_20_17_2000.csv','Test_50_1_10000.csv','Test_50_40_5000.csv','Test_100_31_5000.csv','Test_10_24_2000.csv','Test_20_18_1000.csv',
+'Test_50_11_10000.csv','Test_50_4_10000.csv','Test_100_32_10000.csv','Test_10_25_1000.csv','Test_20_18_2000.csv','Test_50_11_5000.csv','Test_50_4_5000.csv','Test_100_32_5000.csv',
+'Test_10_25_2000.csv','Test_20_19_1000.csv','Test_50_12_10000.csv','Test_50_5_10000.csv','Test_100_33_10000.csv','Test_10_26_1000.csv','Test_20_19_2000.csv','Test_50_12_5000.csv',
+'Test_50_5_5000.csv','Test_100_33_5000.csv','Test_10_26_2000.csv','Test_20_20_1000.csv','Test_50_13_10000.csv','Test_50_6_10000.csv','Test_100_34_10000.csv','Test_10_27_1000.csv',
+'Test_20_20_2000.csv','Test_50_13_5000.csv','Test_50_6_5000.csv','Test_100_34_5000.csv','Test_10_27_2000.csv','Test_20_2_1000.csv','Test_50_14_10000.csv','Test_50_7_10000.csv',
+'Test_100_3_5000.csv','Test_10_28_1000.csv','Test_20_21_1000.csv','Test_50_14_5000.csv','Test_50_7_5000.csv','Test_100_35_10000.csv','Test_10_28_2000.csv','Test_20_21_2000.csv',
+'Test_50_1_5000.csv','Test_50_8_10000.csv','Test_100_35_5000.csv','Test_10_29_1000.csv','Test_20_2_2000.csv','Test_50_15_10000.csv','Test_50_8_5000.csv','Test_100_36_10000.csv',
+'Test_10_29_2000.csv','Test_20_22_1000.csv','Test_50_15_5000.csv','Test_50_9_10000.csv','Test_100_36_5000.csv','Test_10_30_1000.csv','Test_20_22_2000.csv','Test_50_16_10000.csv',
+'Test_50_9_5000.csv','Test_100_37_10000.csv','Test_10_30_2000.csv','Test_20_23_1000.csv','Test_50_16_5000.csv','Test_100_37_5000.csv','Test_10_3_1000.csv','Test_20_23_2000.csv',
+'Test_50_17_10000.csv'
 
